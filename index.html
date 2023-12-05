@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">    
+    <title>WorkBook</title>
+</head>
+<body id="body">
+	<div class="container">
+    <h1>Books</h1>
+    <form action="" id="form">
+        <label for="id_number">ID_Number</label>
+        <br>
+        <input type="text" id="id_number">
+        <br>
+        <br>
+        <label for="title">Title</label>
+        <br>
+        <input type="text" id="title">
+        <br>
+        <br>
+        <label for="edition_year">Edition year</label>
+        <br>
+        <input type="text" id="edition_year">
+        <br>
+        <br>
+        <label for="author">Author</label>
+        <br>
+        <input type="text" id="author">
+        <br>
+        <br>
+        <label for="cost">Cost</label>
+        <br>
+        <input type="text" id="cost">
+        <br>
+        <br>
+        <label for="number_of_copies">Number of copies</label>
+        <br>
+        <input type="text" id="number_of_copies">
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="button" onclick="addBook();">Add</button>
+        <button type="button" onclick="cleanFormInput();">Clear</button>
+    </form>
+</div>
+
+    <div id="book-save" style="visibility: hidden;"class="save-book save-book-monitor">
+        <h2 class="text-danger-header">Sorry!</h2>
+        <p class="text-danger"><strong>The book has already existed.</strong></p>
+        <a id="book-save-click" href="#" class="button-book-save" value="" onclick="cleanButton();">Undestand!</a>
+    </div>
+ 
+    <div id="book-bd" style="visibility: hidden;"class="save-bd save-b-d">
+        <h2 class="text-sucsess-header">Sucsess!</h2>
+        <p class="text-sucsess"><strong>The book saved!</strong></p>
+        <a id="book-bd-sucsess" href="#" class="book-bd-save" value="" onclick="cleanButton();">Thanck You!</a>
+    </div>
+    
+    <table id="table_book">
+        <thead> 
+            <tr>
+                <th>ID_Number</th>
+                <th>Title</th>
+                <th>Edition_year</th>
+                <th>Author</th>
+                <th>Cost</th>
+                <th>Number of copies</th>
+            </tr>
+        </thead>
+        <tbody id="tableArray"></tbody>
+        <tfoot></tfoot>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
