@@ -10,6 +10,7 @@
 <body id="body">
 	<div class="container">
     <h1>Books</h1>
+    <!--Form-->
     <form action="" id="form">
         <label for="id_number">ID_Number</label>
         <br>
@@ -43,23 +44,24 @@
         <br>
         <br>
         <br>
+        <!--Button ADD, CLEAR FORM-->
         <button type="button" onclick="addBook();">Add</button>
         <button type="button" onclick="cleanFormInput();">Clear</button>
     </form>
 </div>
-
+      <!--Sorry-->
     <div id="book-save" style="visibility: hidden;"class="save-book save-book-monitor">
         <h2 class="text-danger-header">Sorry!</h2>
         <p class="text-danger"><strong>The book has already existed.</strong></p>
         <a id="book-save-click" href="#" class="button-book-save" value="" onclick="cleanButton();">Undestand!</a>
     </div>
- 
+    <!--Sucsess-->
     <div id="book-bd" style="visibility: hidden;"class="save-bd save-b-d">
         <h2 class="text-sucsess-header">Sucsess!</h2>
         <p class="text-sucsess"><strong>The book saved!</strong></p>
         <a id="book-bd-sucsess" href="#" class="book-bd-save" value="" onclick="cleanButton();">Thanck You!</a>
     </div>
-    
+    <!--Table-->
     <table id="table_book">
         <thead> 
             <tr>

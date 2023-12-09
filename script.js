@@ -1,6 +1,6 @@
-alert ("Js it is ...");
-books = [];
-
+//alert ("Js it is ...");
+books =[];
+var bookNumber = 0;
 // Это функция для получения результата ввода с инпут
 function addBook() { 
     let id_number = document.getElementById('id_number').value;
@@ -10,9 +10,10 @@ function addBook() {
     let cost = document.getElementById('cost').value;
     let number_of_copies = document.getElementById('number_of_copies').value;
     
-    //console.log (`id_number${id_number} title=${title} edition_year=${edition_year} author=${author}
-    //cost=${cost} number_of_copies=${number_of_copies}`);
-    
+    console.log (`id_number${id_number} title=${title} edition_year=${edition_year} author=${author}
+    cost=${cost} number_of_copies=${number_of_copies}`);
+    bookNumber++;
+    console.log(bookNumber);
     let book = {
         id_number: id_number,
         title: title,
@@ -22,22 +23,32 @@ function addBook() {
         number_of_copies: number_of_copies
     }
     //books.push('book');
-    //console.log(`${title} = ` + 'the newbook is table');
+   
     let hasBook = false;
     let bookSave = document.getElementById('book-save');
     let bookBd = document.getElementById('book-bd');
-
+    
     for(let i = 0; i < books.length; i++) {
         let currentBook = books[i];
         if(book.id_number == currentBook.id_number) {
             hasBook = true;
+            books.push(book);
             break;
         }
     }
+    //for(let i = 0; i < books.length; i++) {
+        if(book.id_number == books.id_number) {
+            document.getElementById('book-save').style.visibility = "visible";
+            books.push(book) = false;
+            cleanFormInput() = true;
+        }
+    //}
 
     if (hasBook == book.id_number) {
         //return false;
         document.getElementById('book-save').style.visibility = "visible";
+        books.push(book) = false;
+
         //innerHtml.body = style.opacity = 0;
         document.getElementById('book-bd').style.visibility = "hidden";
     }
@@ -46,29 +57,25 @@ function addBook() {
            document.getElementById('book-bd').style.visibility = "visible";
            //document.getElementById('form').style.opacity = "0";
            document.getElementById('book-save').style.visibility = "hidden";
+        }    
+        console.log(books);
+        console.log(`${title} = ` + 'the newbook is table');
+    let tableArray = document.getElementById('tableArray');
+    let rowTableArray = document.createElement("tr");
+    tableArray.appendChild(rowTableArray);
+    addColumnToRow (rowTableArray, id_number);
+    addColumnToRow (rowTableArray, title);
+    addColumnToRow (rowTableArray, edition_year);
+    addColumnToRow (rowTableArray, author);
+    addColumnToRow (rowTableArray, cost);
+    addColumnToRow (rowTableArray, number_of_copies);
+    //document.querySelector('tableArray').appendChild(row)
+     function addColumnToRow(row, columnValue) {
+        var column = document.createElement("td");
+        column.innerHTML = columnValue;
+        row.appendChild(column);
     }
-  console.log(books);
 }
-
-
-let tableArray = document.getElementById('tableArray')
-let rowTableArray = document.createElement("tr");
-tableArray.appendChild(rowTableArray);
-
-addColumnToRow (rowTableArray, 'id_number');
-addColumnToRow (rowTableArray, 'title');
-addColumnToRow (rowTableArray, 'edition_year');
-addColumnToRow (rowTableArray, 'author');
-addColumnToRow (rowTableArray, 'cost');
-addColumnToRow (rowTableArray, 'number_of_copies');
-//document.querySelector('tableArray').appendChild(row)
-
-function addColumnToRow(row, columnValue) {
-    var column = document.createElement("td");
-    column.innerHTML = columnValue;
-    row.appendChild(column);
-}
-console.log (table_book);
 function cleanFormInput() {
     document.getElementById('id_number').value = "";
     document.getElementById('title').value = "";
