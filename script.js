@@ -1,5 +1,5 @@
 //alert ("Js it is ...");
-books =[];
+books = [];
 var bookNumber = 0;
 // Это функция для получения результата ввода с инпут
 function addBook() { 
