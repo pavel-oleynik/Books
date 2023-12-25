@@ -10,7 +10,16 @@ h1 {
 	text-align: center;
 }
 
-#book-save {
+.name-table {
+	margin-top: 50px;
+	padding: 20px;
+}
+
+.name-table-items {
+	margin: 0px auto;
+	text-align: center;
+}
+#error {
 	width: 300px;
 	height: 150px;
 	background: red;
@@ -23,7 +32,7 @@ h1 {
 
 }
 
-#book-bd {
+#sucsess {
 	width: 300px;
 	height: 150px;
 	background: green;
@@ -55,14 +64,14 @@ a {
 }
 
 table {
-	margin: 100px auto;
+	margin: 30px auto;
     width: 800px;
     border: 3px solid black;
     color: rgb(0, 0, 0);
 }
 
 th {
-	background: gray;
+	background: rgb(129, 97, 97);
 	border: 1px solid black;
 }
 
@@ -76,4 +85,5 @@ tr:nth-child(even) {
 
 tr {
 	background: rgb(120, 120, 120);
+	padding: 15px;
 }
