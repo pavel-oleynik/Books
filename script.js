@@ -1,4 +1,5 @@
-//alert ("Js it ...");
+alert ("Js it ...");
+
 const books = [];
 
 function addBook() {
@@ -23,6 +24,7 @@ function bookExists(book) {
         }
     }
     return false;
+
 }
 
 function getBookFromInput() {
