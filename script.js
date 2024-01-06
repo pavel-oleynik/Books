@@ -89,3 +89,11 @@ function hideStatus () {
      document.getElementById('sucsess').style.visibility = "hidden";
      document.getElementById('error').style.visibility = "hidden";
 }
+
+/*    IndexOf array
+
+console.log(books[0]) - first element;
+console.log(books[1]) - next element;
+console.log(books[books.lenght -1]) - finish element;
+
+*/
